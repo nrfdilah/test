@@ -30,7 +30,7 @@ class Database
 
         return $this->cont;
     }
- 
+
 
     public function query($query)
     {
@@ -61,8 +61,8 @@ class Database
             }
 
             $query = $this->cont->prepare(
-                "INSERT INTO jurusan(telepon, bidang_studi, program_studi, nama_jurusan, email, alamat, kode, saldo)
-                VALUES (:telepon,:bidang_studi,:program_studi,:nama_jurusan,:email,:alamat,:kode,0)"
+                "INSERT INTO jurusan(telepon, bidang_studi, program_studi, nama_jurusan, email, alamat, biaya_ukt kode, saldo)
+                VALUES (:telepon,:bidang_studi,:program_studi,:nama_jurusan,:email,:alamat,:kode,0,0)"
             );
 
             $query->bindParam("telepon", $telepon, PDO::PARAM_INT);
